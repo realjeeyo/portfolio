@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
-*{
-  font-family: Geist
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: Geist;
 }
