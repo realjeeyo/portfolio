@@ -65,7 +65,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className="sticky top-0 z-50 flex w-full justify-center scroll-mt-4 py-4">
+        <header className="sticky top-0 z-50 flex w-full justify-centers">
             <div className="mx-auto flex max-w-4xl items-center justify-center rounded-4xl border border-white/25 bg-white/35 px-5 py-2 shadow-lg shadow-black/5 backdrop-blur-2xl">
                 <nav
                     className="relative flex flex-wrap items-center justify-center gap-3"
