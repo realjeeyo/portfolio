@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jio Delgado | Portfolio",
-  description: "Creative portfolio of Jio Delgado, a web developer and UX/UI designer.",
+  description:
+    "Creative portfolio of Jio Delgado, a web developer and UX/UI designer.",
 };
 
 export default function RootLayout({
@@ -28,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="flex min-h-screen flex-col justify-between bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900 p-10 text-white">
+        <main className="flex min-h-screen flex-col justify-between bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900 text-white">
           <Navbar />
           {children}
         </main>
