@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
   <div className="container mx-auto space-y-32 text-center">
@@ -6,6 +8,11 @@ export default function Home() {
     <p className="text-lg text-gray-200 max-w-2xl mx-auto">
       Explore my work, skills, and how to get in touch.
     </p>
+    <div className="mt-2 flex justify-center gap-4">
+      <Link href="/delgado-resume.pdf" className="rounded bg-white px-4 py-2 text-black" download>Download CV</Link>
+      <Link href="https://github.com/realjeeyo" className="rounded bg-white px-4 py-2 text-black">GitHub</Link>
+      <Link href="https://linkedin.com/in/jiodelgado" className="rounded bg-white px-4 py-2 text-black">LinkedIn</Link>
+    </div>
     </section>
 
     <section id="about" className="pt-24">
