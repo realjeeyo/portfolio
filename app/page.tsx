@@ -66,7 +66,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="pt-80 h-dvh">
+        <section id="about" className="pt-80 h-dvh ">
+          <table className="bg-black"></table>
           <h2 className="text-3xl font-semibold mb-4">About Me</h2>
           <p className="text-gray-200 max-w-2xl mx-auto">
             I&apos;m a passionate web developer focused on building beautiful,

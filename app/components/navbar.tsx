@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed left-0 right-0 z-50 pt-4 flex w-full justify-center">
-      <div className="mx-auto flex max-w-4xl items-center justify-center rounded-4xl border border-white/25 bg-white/15 px-5 py-2 shadow-lg shadow-black/5 backdrop-blur-md">
+      <div className="mx-auto flex max-w-4xl items-center justify-center rounded-4xl border border-white/25 bg-white/15 px-4 py-2 shadow-lg shadow-black/5 backdrop-blur-md">
         <nav
           className="relative flex flex-wrap items-center justify-center gap-3"
           onMouseLeave={() => {
@@ -81,7 +81,7 @@ const Navbar = () => {
         >
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute rounded-full bg-black transition-all duration-300 ease-out"
+            className="pointer-events-none absolute rounded-full bg-gray-200/20 transition-all duration-300 ease-out"
             style={{
               left: `${indicatorStyle.left}px`,
               width: `${indicatorStyle.width}px`,
