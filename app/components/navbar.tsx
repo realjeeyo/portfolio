@@ -21,6 +21,7 @@ const Navbar = () => {
     height: 0,
     opacity: 0,
   });
+  const indicatorRef = React.useRef<HTMLSpanElement>(null);
 
   const updateIndicator = React.useCallback((index: number) => {
     const node = itemRefs.current[index];
@@ -80,6 +81,7 @@ const Navbar = () => {
           }}
         >
           <span
+            ref={indicatorRef}
             aria-hidden="true"
             className="pointer-events-none absolute rounded-full bg-gray-200/20 transition-all duration-300 ease-out"
             style={{
@@ -97,6 +99,18 @@ const Navbar = () => {
                 itemRefs.current[index] = el;
               }}
               aria-current={index === activeIndex ? "page" : undefined}
+              onClick={() => {
+                const el = indicatorRef.current;
+                if (el) {
+                  el.style.transition = 'none';
+                  void el.offsetHeight;
+                }
+                setActiveIndex(index);
+                setHoveredIndex(index);
+                requestAnimationFrame(() => {
+                  if (el) el.style.transition = '';
+                });
+              }}
               onMouseEnter={() => {
                 isHovering.current = true;
                 setHoveredIndex(index);
