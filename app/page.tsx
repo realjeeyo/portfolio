@@ -124,7 +124,7 @@ export default function Home() {
             <div className="rounded-3xl border border-white/25 bg-white/10 backdrop-blur-xl shadow-2xl p-8">
               {/* Tags */}
               <div className="flex flex-wrap gap-2 justify-center pb-6 mb-6 border-b border-white/20">
-                {["Curious", "Ambitious", "Empathetic", "Loyal"].map((tag) => (
+                {["Full-stack Web Developer", "UI/UX Designer", "Graphic Designer", "Video Editor"].map((tag) => (
                   <span key={tag} className="px-4 py-1.5 rounded-full bg-white/15 text-sm font-medium border border-white/20 hover:bg-white hover:text-gray-800 transition-colors">
                     {tag}
                   </span>
@@ -205,9 +205,25 @@ export default function Home() {
                     <div className="text-left">
                       <h3 className="text-xl font-semibold mb-3 text-white">Gallery</h3>
                       <div className="grid grid-cols-3 gap-4">
-                        {[1, 2, 3, 4, 5, 6].map((item) => (
-                          <div key={item} className="aspect-square rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                            <p className="text-gray-400 text-sm">Image {item}</p>
+                        {[
+                          { src: '/gallery/IMG_0163.jpg', alt: 'Gallery 2' },
+                          { src: '/gallery/IMG_2309.jpg', alt: 'Gallery 5' },
+                          { src: '/gallery/IMG_1934.jpg', alt: 'Gallery 3' },
+                          { src: '/gallery/IMG_9851.jpg', alt: 'Gallery 9' },
+                          { src: '/gallery/IMG_4407.jpg', alt: 'Gallery 6' },
+                          { src: '/gallery/IMG_4437.jpg', alt: 'Gallery 7' },
+                          { src: '/gallery/IMG_7095.jpg', alt: 'Gallery 8' },
+                          { src: '/gallery/img1.jpg', alt: 'Gallery 1' },
+                          { src: '/gallery/IMG_2046.jpg', alt: 'Gallery 4' },
+                        ].map((image, index) => (
+                          <div key={index} className="aspect-square rounded-lg overflow-hidden border border-white/10 hover:scale-105 hover:outline-2 transition-transform">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              width={300}
+                              height={300}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                         ))}
                       </div>
